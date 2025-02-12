@@ -1,0 +1,17 @@
+[distribution]
+name = "app-template"
+
+[server]
+address = "127.0.0.1:9000"
+
+[cache]
+kind = "Memory"
+
+[broker]
+kind = "Memory"
+
+[database]
+kind = "Memory"
+
+[tracing]
+kind = "Memory"

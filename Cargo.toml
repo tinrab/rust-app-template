@@ -1,0 +1,20 @@
+[package]
+name = "rust-app-template"
+edition = "2021"
+
+[[bin]]
+name = "rust-app-template"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = "1.0.95"
+config = "0.15.8"
+serde = { version = "1.0.217", features = ["derive"] }
+
+# [profile.dev]
+# opt-level = 1
+# debug = 0
+# strip = "debuginfo"
+
+# [profile.dev.package."*"]
+# opt-level = 3
