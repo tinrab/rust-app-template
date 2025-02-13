@@ -1,17 +1,14 @@
 run:
     RUSTFLAGS="-Awarnings" \
-        cargo run --bin rust-app-template \
-        --target=x86_64-unknown-linux-gnu
+        cargo run --bin rust-app-template
 
     # nightly
     # RUSTFLAGS="-Awarnings -Z threads=8" \
-    #     cargo +nightly run --bin rust-app-template \
-    #     --target=x86_64-unknown-linux-gnu
+    #     cargo +nightly run --bin rust-app-template
 
 build:
     RUSTFLAGS="-Awarnings" \
-        cargo build \
-        --target=x86_64-unknown-linux-gnu
+        cargo build
 
 lint:
     cargo fmt --all -- --check
@@ -34,7 +31,7 @@ lint:
         -A clippy::missing_safety_doc
 
 test:
-    RUSTFLAGS="-Awarnings" cargo test --target=x86_64-unknown-linux-gnu
+    RUSTFLAGS="-Awarnings" cargo test
 
 clean:
     cargo clean
