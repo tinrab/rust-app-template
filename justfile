@@ -1,14 +1,14 @@
+export RUSTFLAGS := "-Awarnings"
+
 run:
-    RUSTFLAGS="-Awarnings" \
-        cargo run --bin rust-app-template
+    cargo run --bin rust-app-template
 
     # nightly
     # RUSTFLAGS="-Awarnings -Z threads=8" \
     #     cargo +nightly run --bin rust-app-template
 
 build:
-    RUSTFLAGS="-Awarnings" \
-        cargo build
+    cargo build
 
 lint:
     cargo fmt --all -- --check
@@ -31,7 +31,7 @@ lint:
         -A clippy::missing_safety_doc
 
 test:
-    RUSTFLAGS="-Awarnings" cargo test
+    cargo test
 
 clean:
     cargo clean
